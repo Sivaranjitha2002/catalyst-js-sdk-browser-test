@@ -193,6 +193,16 @@
   background: linear-gradient(135deg, #9ce9e6, #feccdf);
 }
 
+/* User Management Buttons */
+.test-button.user-mgmt {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+.test-button.user-mgmt:hover {
+  background: linear-gradient(135deg, #fde4c9, #faa892);
+}
+
 /* Authentication Section */
 .auth-section {
   border: 2px solid #ff6b6b;

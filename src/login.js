@@ -5,6 +5,7 @@ import { Stratus, TransferManager } from '@zcatalyst/stratus';
 import { Search } from '@zcatalyst/search';
 import { PushNotification } from '@zcatalyst/push-notification';
 import { Functions } from '@zcatalyst/functions';
+import { UserManagement } from '@zcatalyst/auth';
 import { useState } from 'react';
 import './Login.css';
 
@@ -243,6 +244,29 @@ function Login() {
         });
     };
 
+    // User Management Operations
+    const handleGetUserDetails = (e) => {
+        e.preventDefault();
+        setOperationLoading('user-details');
+        const userManagement = new UserManagement();
+        userManagement.getCurrentUser().then((data) => {
+            updateResponse('user-details', data);
+        }).catch((err) => {
+            updateResponse('user-details', err.message || 'An error occurred', true);
+        });
+    };
+
+    const handleResetUserPassword = (e) => {
+        e.preventDefault();
+        setOperationLoading('reset-password');
+        const userManagement = new UserManagement();
+        userManagement.resetPassword('sivaranjitha9843@gmail.com', { platform_type: 'web'}).then((data) => {
+            updateResponse('reset-password', data);
+        }).catch((err) => {
+            updateResponse('reset-password', err.message || 'An error occurred', true);
+        });
+    };
+
     // Authentication Operations
     const handleLogout = async () => {
         try {
@@ -318,6 +342,15 @@ function Login() {
             <h2>Functions Operations</h2>
             <div className="button-group">
               <button className="test-button functions" onClick={handleFunction}>Execute Function</button>
+            </div>
+          </div>
+
+          {/* User Management Section */}
+          <div className="section">
+            <h2>User Management Operations</h2>
+            <div className="button-grid">
+              <button className="test-button user-mgmt" onClick={handleGetUserDetails}>Get Current User</button>
+              <button className="test-button user-mgmt" onClick={handleResetUserPassword}>Reset Password</button>
             </div>
           </div>
 

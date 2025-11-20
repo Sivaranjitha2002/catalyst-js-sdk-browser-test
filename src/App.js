@@ -103,7 +103,10 @@ function Home() {
   const handleSignup = async () => {
     try {
       setAuthLoading(true);
-      await zcAuth.signUp({ redirectUrl: '/login' });
+      await zcAuth.signUp({
+        last_name: 'User',
+        email_id:'dfkfjkfj@gmail.com'
+      });
       console.log('Signup initiated');
     } catch (error) {
       console.error('Signup error:', error);
