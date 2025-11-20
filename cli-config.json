@@ -1,0 +1,9 @@
+{
+	"slate": {
+		"dev_command": "PORT=$ZC_SLATE_PORT npm start"
+	},
+	"environment_variables": {
+		"ZC_CATALYST_APP": "react-1",
+		"ZC_CATALYST_ENV": "development"
+	}
+}

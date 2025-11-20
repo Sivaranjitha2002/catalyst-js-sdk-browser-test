@@ -1,0 +1,335 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Home Component Styles */
+.home-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-status {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.auth-status h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.auth-indicator {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.auth-indicator.authenticated {
+  background: #d4edda;
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.auth-indicator.not-authenticated {
+  background: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+.login-options {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.login-options h2 {
+  color: #333;
+  margin: 0 0 25px 0;
+}
+
+.login-buttons {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.login-btn {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 25px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Hosted Login Button */
+.hosted-login {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.hosted-login:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+/* Embedded Login Button */
+.embedded-login {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.embedded-login:hover:not(:disabled) {
+  background: #28a745;
+  color: white;
+  border-color: #1e7e34;
+}
+
+/* Third Party Login Button */
+.thirdparty-login {
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.thirdparty-login:hover:not(:disabled) {
+  background: #ffc107;
+  color: #212529;
+  border-color: #e0a800;
+}
+
+/* Account Management Section */
+.auth-actions {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #e9ecef;
+}
+
+.auth-actions h3 {
+  color: #333;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.action-btn {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 18px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.action-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action-desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: #666;
+  text-align: center;
+}
+
+/* Signup Button */
+.signup-btn {
+  border-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.signup-btn:hover:not(:disabled) {
+  background: #17a2b8;
+  color: white;
+  border-color: #138496;
+}
+
+/* Public Signup Button */
+.public-signup-btn {
+  border-color: #20c997;
+  color: #20c997;
+}
+
+.public-signup-btn:hover:not(:disabled) {
+  background: #20c997;
+  color: white;
+  border-color: #1ba085;
+}
+
+/* Change Password Button */
+.change-password-btn {
+  border-color: #6f42c1;
+  color: #6f42c1;
+}
+
+.change-password-btn:hover:not(:disabled) {
+  background: #6f42c1;
+  color: white;
+  border-color: #5a32a3;
+}
+
+/* Authenticated Actions */
+.authenticated-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.change-password-btn.authenticated {
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+.loading-message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  color: #856404;
+}
+
+.authenticated-content {
+  background: #d4edda;
+  border: 2px solid #c3e6cb;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.authenticated-content h2 {
+  color: #155724;
+  margin: 0 0 15px 0;
+}
+
+.authenticated-content p {
+  color: #155724;
+  margin: 0 0 20px 0;
+}
+
+.dashboard-link {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dashboard-link:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .login-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-btn {
+    padding: 20px 15px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
