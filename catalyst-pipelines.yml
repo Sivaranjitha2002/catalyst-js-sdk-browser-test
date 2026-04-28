@@ -11,7 +11,7 @@ jobs:
       - echo "Hello World!"
   deploy:
     steps:
-        - npm install zcatalyst-cli -g
+        - npm install /catalyst/zcatalyst-cli-1.25.1.tgz -g
         - catalyst project:list --token m_1004.8f2683704da7ca928bfe0cfb2054d67e.fbc311a26f7835760e54895a951bea8d --verbose
         - catalyst deploy --token m_1004.8f2683704da7ca928bfe0cfb2054d67e.fbc311a26f7835760e54895a951bea8d --verbose
 stages:
