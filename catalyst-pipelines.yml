@@ -12,7 +12,8 @@ jobs:
   deploy:
     steps:
         - npm install zcatalyst-cli -g
-        - catalyst deploy --token m_1004.8f2683704da7ca928bfe0cfb2054d67e.fbc311a26f7835760e54895a951bea8d
+        - catalyst project:list --token m_1004.8f2683704da7ca928bfe0cfb2054d67e.fbc311a26f7835760e54895a951bea8d --verbose
+        - catalyst deploy --token m_1004.8f2683704da7ca928bfe0cfb2054d67e.fbc311a26f7835760e54895a951bea8d --verbose
 stages:
   - name: build
     jobs:
