@@ -2,7 +2,7 @@
   "slate": [
     {
       "name": "revamp-auth-check",
-      "source": "/catalyst/catalyst-js-sdk-browser-test"
+      "source": "/catalyst"
     }
   ]
 }
